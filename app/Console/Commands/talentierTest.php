@@ -41,7 +41,7 @@ class talentierTest extends Command
      */
     public function handle()
     {
-        $urlStart = 'https://www.marca.es/';
+        $urlStart = 'https://www.isdin.com';
         if(!Sites::where('url',$urlStart)->first()){
             $newSite = new Sites();
             $newSite->url = $urlStart;

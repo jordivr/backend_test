@@ -16,6 +16,7 @@ class configHeadersSeed extends Seeder
         $obj = new configHeaders();
         $obj->name="X-Generator";
         $obj->save();
+        
         $obj = new configHeaders();
         $obj->name="Cache-Control";
         $obj->save();
