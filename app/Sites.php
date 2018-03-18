@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Sites extends Model
 {
     protected $table = 'sites';
+    protected $fillable = ['url'];
 
     public function urls()
     {

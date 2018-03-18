@@ -28,9 +28,8 @@ class talentierTest extends Command
      *
      * @return void
      */
-    public function __construct( CrawlerRepo $CrawlerRepo)
+    public function __construct()
     {
-        $this->CrawlerRepo   = $CrawlerRepo;
         parent::__construct();
     }
 
@@ -42,17 +41,12 @@ class talentierTest extends Command
     public function handle()
     {
         $urlStart = 'https://www.isdin.com';
-        if(!Sites::where('url',$urlStart)->first()){
-            $newSite = new Sites();
-            $newSite->url = $urlStart;
-            $newSite->save();
+        $this->info("Checking ".$urlStart. " is alive");
+        $crawlerRepo = new CrawlerRepo();
+        if ($crawlerRepo->isLiveUrl($urlStart)) {
+            $siteObj=Sites::where('url', $urlStart)->firstOrCreate(['url' => $urlStart]);
+            $this->info("Starting... ".$urlStart);
+            $crawlerRepo->talentier($siteObj);
         }
-        else $newSite = Sites::where('url',$urlStart)->first();
-        if($this->CrawlerRepo->isLiveUrl($urlStart)){
-            $this->CrawlerRepo->talentier($newSite);
-        }
-        
     }
-
-
 }
