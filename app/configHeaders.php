@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class configHeaders extends Model
 {
-    protected $table = 'config_heders';
+    protected $table = 'config_headers';
 }

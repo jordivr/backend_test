@@ -13,7 +13,7 @@ class CreateTableConfigHeaders extends Migration
      */
     public function up()
     {
-        Schema::create('config_heders', function(Blueprint $table)
+        Schema::create('config_headers', function(Blueprint $table)
         {
             $table->increments('id');
             $table->string('name',255);
@@ -28,6 +28,6 @@ class CreateTableConfigHeaders extends Migration
      */
     public function down()
     {
-        Schema::drop('config_heders');
+        Schema::drop('config_headers');
     }
 }
