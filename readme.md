@@ -10,8 +10,14 @@
 
 ## Instalación
 
-- DB: php artisan install
-- DB: php aritsan db:seed -> Populate DB
+- .env tiene creada un DB: talienter. 
+- La podemos crear desde mysql -u <login> -p y create database talentier;
+- git clone https://github.com/jordivr/backend_test.git
+- cd backend_test
+- composer install
+- DB: php artisan migrate:install
+- DB: php artisan migrate:refresh
+- DB: php artisan db:seed -> Populate DB
 
 ## License
 
