@@ -10,7 +10,7 @@
 
 ## Instalación
 
-- .env tiene creada un DB: talienter. 
+- .env tiene creada un DB: talentier. 
 - La podemos crear desde mysql -u <login> -p y create database talentier;
 - git clone https://github.com/jordivr/backend_test.git
 - cd backend_test
