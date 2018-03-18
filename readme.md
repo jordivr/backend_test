@@ -19,6 +19,11 @@
 - DB: php artisan migrate:refresh
 - DB: php artisan db:seed -> Populate DB
 
+
+## Pendiente
+
+- Pruebas en cambios del header: header Date
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
